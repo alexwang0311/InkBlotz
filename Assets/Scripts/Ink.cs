@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ink {
+    private float maxInk;
 
     private float ink;
 
     public Ink(float ink)
     {
         this.ink = ink;
+        maxInk = ink;
     }
 
     public void Use(float use)
@@ -28,5 +30,9 @@ public class Ink {
     public void AddInk(float extra)
     {
         ink += extra;
+        if (ink > maxInk)
+        {
+            ink = maxInk;
+        }
     }
 }
