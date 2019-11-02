@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ink
   - Door
+  - Bottom
   layers:
   - Default
   - TransparentFX

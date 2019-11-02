@@ -20,7 +20,7 @@ public class Line : MonoBehaviour {
 
         if (Vector2.Distance(points.Last(), point) > 0.1f)
         {
-            ink.Use(Vector2.Distance(points.Last(), point) * 0.1f);
+            ink.Use(Vector2.Distance(points.Last(), point) * 0.5f);
             Debug.Log("Remaining ink: " + ink.GetInk());
             SetPoint(point);
         }

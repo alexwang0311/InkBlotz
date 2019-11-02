@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 
     private bool isFacingRight;
 
+    public Transform respawnPosition;
+
 
 	// Use this for initialization
 	void Start () {
@@ -124,18 +126,11 @@ public class PlayerController : MonoBehaviour {
             Destroy(collision.gameObject);
         }
 
-        /*
-        if (collision.gameObject.tag == "Door")
+        if (collision.gameObject.tag == "Bottom")
         {
-            Debug.Log("Door");
-            if (SceneManager.GetActiveScene().name == "Level0") {
-                SceneManager.LoadScene("Level1");
-            }
-            if (SceneManager.GetActiveScene().name == "Level1")
-            {
-                SceneManager.LoadScene("Level2");
-            }
+            Debug.Log("Falls out of bottom");
+            transform.position = respawnPosition.position;
         }
-        */
+        
     }
 }

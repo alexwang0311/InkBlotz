@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LineCreator : MonoBehaviour {
     public GameObject LinePrefab;
@@ -8,9 +9,8 @@ public class LineCreator : MonoBehaviour {
     public static Ink ink;
 	// Use this for initialization
 	void Start () {
-        ink = new Ink(1.5f);
-        Debug.Log("New pen with ink: " + ink.GetInk());
-	}
+        ink = new Ink(3.5f);
+    }
 	
 	// Update is called once per frame
 	void Update () {

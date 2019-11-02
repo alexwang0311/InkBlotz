@@ -5,39 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class EnterDoor : MonoBehaviour {
     public GameObject openDoor;
+    private bool hasCollided;
 
 	// Use this for initialization
 	void Start () {
-
+        hasCollided = false;
 	}
-    
+
 
     // Update is called once per frame
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(other.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("Collided with player");
-            gameObject.SetActive(false);
-            openDoor.SetActive(true);
-            StartCoroutine(waitForSeconds(2));
+            if (!hasCollided) {
+                hasCollided = true;
+                Debug.Log("Collided with player");
+                gameObject.SetActive(false);
+                openDoor.SetActive(true);
+            }
         }
     }
-
-    
-
-    IEnumerator waitForSeconds(float time)
-    {
-        yield return new WaitForSeconds(time);
-        Debug.Log("Door opened");
-        if (SceneManager.GetActiveScene().name == "Level0")
-        {
-            SceneManager.LoadScene("Level1");
-        }
-        if (SceneManager.GetActiveScene().name == "Level1")
-        {
-            SceneManager.LoadScene("Level2");
-        }
-    }
-
 }
