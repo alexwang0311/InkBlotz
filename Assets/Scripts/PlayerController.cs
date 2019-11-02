@@ -19,12 +19,18 @@ public class PlayerController : MonoBehaviour {
 
     public float rayDistance;
 
+    private Animator myAnimator;
+
+    private bool isFacingRight;
+
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
         jumpTotal = JUMP_NUM;
         isJumping = false;
+        isFacingRight = true;
 	}
 	
 	// Update is called once per frame
@@ -47,9 +53,29 @@ public class PlayerController : MonoBehaviour {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * jumpSpeed, rb.velocity.y);
         }
 
+        //Animation control
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            myAnimator.SetBool("isWalking", true);
+        }
+        else
+        {
+            myAnimator.SetBool("isWalking", false);
+        }
+
+        //Flip control
+        if (isFacingRight && Input.GetKeyDown(KeyCode.LeftArrow)) {
+            Flip();
+        }
+        if (!isFacingRight && Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Flip();
+        }
+
         if (Input.GetKeyDown("space") && jumpTotal > 0)
         {
-             isJumping = true;
+             myAnimator.SetTrigger("isJumping");
+
              jumpTotal--;
              Debug.Log("Total jumps: " + jumpTotal);
              //Debug.Log("Whitespace down. Jump with force: " + jumpForce);
@@ -58,11 +84,17 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown("space") && jumpTotal == 0)
         {
-            isJumping = false;
             Debug.Log("No more jumps");
         }
     }
 
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
+    }
 
     private void AdjustRotation()
     {
@@ -92,6 +124,7 @@ public class PlayerController : MonoBehaviour {
             Destroy(collision.gameObject);
         }
 
+        /*
         if (collision.gameObject.tag == "Door")
         {
             Debug.Log("Door");
@@ -103,5 +136,6 @@ public class PlayerController : MonoBehaviour {
                 SceneManager.LoadScene("Level2");
             }
         }
+        */
     }
 }

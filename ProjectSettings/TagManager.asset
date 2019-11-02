@@ -17,7 +17,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - Background
   - 
   - 
   - 
@@ -43,12 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Line
-    uniqueID: 1675919417
+  - name: Background
+    uniqueID: 2998662005
     locked: 0
-  - name: Erase
+  - name: BeforePlayer
     uniqueID: 1714809333
     locked: 0
   - name: Player
     uniqueID: 178496341
+    locked: 0
+  - name: AfterPlayer
+    uniqueID: 797853639
     locked: 0
