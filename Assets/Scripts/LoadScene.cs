@@ -18,7 +18,10 @@ public class LoadScene : MonoBehaviour {
     IEnumerator WaitForSeconds(float time)
     {
         yield return new WaitForSeconds(time);
-        PlayerPrefs.SetInt("LevelCleared", SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("LevelCleared"))
+        {
+            PlayerPrefs.SetInt("LevelCleared", SceneManager.GetActiveScene().buildIndex);
+        }
         Debug.Log("Door opened");
         if (SceneManager.GetActiveScene().name == "Level0")
         {
