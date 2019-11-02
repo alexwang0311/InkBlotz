@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Boarder
   - Bottom
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Ground
   - Player
   - Background
-  - 
-  - 
+  - Monster
+  - Boarder
   - 
   - 
   - 

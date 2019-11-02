@@ -131,6 +131,11 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Falls out of bottom");
             transform.position = respawnPosition.position;
         }
-        
+
+        if (collision.gameObject.tag == "Monster")
+        {
+            Debug.Log("Player collided with monster");
+            transform.position = respawnPosition.position;
+        }
     }
 }

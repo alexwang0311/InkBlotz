@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LineCreator : MonoBehaviour {
-    public static float MAX_INK = 1.5f;
+    public static float MAX_INK = 2f;
     public GameObject LinePrefab;
     Line activeLine;
     public static Ink ink;
