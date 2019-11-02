@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour {
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.tag == "Bottom")
+        if (collision.gameObject.tag == "Boarder")
         {
             Debug.Log("Falls out of bottom");
             transform.position = respawnPosition.position;

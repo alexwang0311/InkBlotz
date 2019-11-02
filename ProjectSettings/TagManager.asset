@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ink
   - Door
+  - Boarder
   - Bottom
   layers:
   - Default

@@ -7,7 +7,7 @@ public class Line : MonoBehaviour {
     public LineRenderer lineRenderer;
     public EdgeCollider2D edgeCollider;
     private List<Vector2> points;
-
+    public float ink_consume_speed = 0.1f;
 
     public void UpdateLine(Vector2 point, Ink ink)
     {
@@ -20,7 +20,7 @@ public class Line : MonoBehaviour {
 
         if (Vector2.Distance(points.Last(), point) > 0.1f)
         {
-            ink.Use(Vector2.Distance(points.Last(), point) * 0.5f);
+            ink.Use(Vector2.Distance(points.Last(), point) * ink_consume_speed);
             Debug.Log("Remaining ink: " + ink.GetInk());
             SetPoint(point);
         }
