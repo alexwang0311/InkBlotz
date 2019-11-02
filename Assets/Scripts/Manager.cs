@@ -22,16 +22,7 @@ public class Manager : MonoBehaviour {
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-        //PlayerPrefs.DeleteAll();
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
+        Cursor.visible = true;
 
     }
 
@@ -51,6 +42,7 @@ public class Manager : MonoBehaviour {
         {
             SceneManager.LoadScene(0);
         }
+        
         backGround.SetActive(false);
         buttons[0].SetActive(false);
         buttons[1].SetActive(false);
@@ -82,13 +74,11 @@ public class Manager : MonoBehaviour {
         }
     }
 
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void ShowCredits()
     {
         //show Credits
     }
+
+        
+    
 }

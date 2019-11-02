@@ -138,4 +138,22 @@ public class PlayerController : MonoBehaviour {
             transform.position = respawnPosition.position;
         }
     }
+
+    public void ShowLevelCleared()
+    {
+        GameObject.Find("GameManager").GetComponent<Manager>().ShowLevelCleared();
+        
+        
+    }
+
+        public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ShowMenu()
+    {
+        SceneManager.LoadScene(0);
+        
+    }
 }

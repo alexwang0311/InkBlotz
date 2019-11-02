@@ -7,7 +7,7 @@ public class LoadScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(WaitForSeconds(1));
+        StartCoroutine(waitForSeconds(1));
     }
 	
 	// Update is called once per frame
@@ -15,7 +15,7 @@ public class LoadScene : MonoBehaviour {
 		
 	}
 
-    IEnumerator WaitForSeconds(float time)
+    IEnumerator waitForSeconds(float time)
     {
         yield return new WaitForSeconds(time);
         if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("LevelCleared"))
