@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ink : MonoBehaviour {
+public class Ink {
 
     private float ink;
 
