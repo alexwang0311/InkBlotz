@@ -9,6 +9,13 @@ public class Line : MonoBehaviour {
     private List<Vector2> points;
     public float ink_consume_speed = 0.1f;
 
+    private void Start()
+    {
+        float x = transform.position.x;
+        float y = transform.position.y;
+        edgeCollider.offset = new Vector2(-x, -y);
+    }
+
     public void UpdateLine(Vector2 point, Ink ink)
     {
         if (points == null)
