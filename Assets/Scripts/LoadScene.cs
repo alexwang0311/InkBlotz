@@ -31,6 +31,9 @@ public class LoadScene : MonoBehaviour {
         {
             SceneManager.LoadScene("Level2");
         }
-        
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            SceneManager.LoadScene("Level3");
+        }
     }
 }
