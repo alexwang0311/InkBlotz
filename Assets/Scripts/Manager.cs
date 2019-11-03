@@ -35,6 +35,10 @@ public class Manager : MonoBehaviour {
 
     public void ResumeProgress()
     {
+        if (PlayerPrefs.GetInt("LevelCleared") == 4)
+        {
+            SceneManager.LoadScene(1);
+        }
         SceneManager.LoadScene(PlayerPrefs.GetInt("LevelCleared") + 1);
     }
 
