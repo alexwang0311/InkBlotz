@@ -1,5 +1,5 @@
 # Inkblotz!
-Elevator Pitch:
+Help Mr. Pinkie find his way home by defeating the monsters and drawing the way out! This game will bring you back your childhood creativity and fun. Pick up your pen and start doodling now!!!
 
 ## Inspiration
 Inspired by our childhood memory of drawing monsters and warriors on scratch paper, we created this game to bring back the simple times of unlimited creativity and imagination. 
