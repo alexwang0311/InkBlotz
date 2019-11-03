@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour {
 
     public GameObject backGround;
     public GameObject creditPic;
+    public GameObject cross;
     public GameObject[] levels;
 
     //buttons[0] holds 'Play'
@@ -43,7 +44,8 @@ public class Manager : MonoBehaviour {
         {
             SceneManager.LoadScene(0);
         }
-        
+
+        cross.SetActive(false);
         backGround.SetActive(false);
         buttons[0].SetActive(false);
         buttons[1].SetActive(false);
@@ -64,6 +66,7 @@ public class Manager : MonoBehaviour {
             SceneManager.LoadScene(0);
         }
 
+        cross.SetActive(true);
         creditPic.SetActive(false);
         backGround.SetActive(true);
         buttons[0].SetActive(true);
@@ -79,10 +82,14 @@ public class Manager : MonoBehaviour {
 
     public void ShowCredits()
     {
+        cross.SetActive(false);
         buttons[3].SetActive(true);
         creditPic.SetActive(true);
     }
 
-        
+    public void Quit()
+    {
+        Application.Quit();
+    }   
     
 }
