@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelClear.unity
     guid: a461968c59b0a47e7a85ac7999f6c0b7
+  - enabled: 1
+    path: Assets/Scenes/HiddenLevel.unity
+    guid: 927b3eb1e980244b39fd298069199d3d
   m_configObjects: {}

@@ -9,6 +9,11 @@ public class Eraser : MonoBehaviour {
     private bool isErasing;
 
     // Use this for initialization
+    private void Awake()
+    {
+        Cursor.visible = false;
+    }
+
     private void OnEnable()
     {
         myAnimator = GetComponent<Animator>();

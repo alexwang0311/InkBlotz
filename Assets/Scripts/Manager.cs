@@ -35,11 +35,16 @@ public class Manager : MonoBehaviour {
 
     public void ResumeProgress()
     {
-        if (PlayerPrefs.GetInt("LevelCleared") == 4)
+        if (PlayerPrefs.GetInt("LevelCleared") == 5)
         {
+            Debug.Log("Reset level");
             SceneManager.LoadScene(1);
         }
-        SceneManager.LoadScene(PlayerPrefs.GetInt("LevelCleared") + 1);
+        else
+        {
+
+            SceneManager.LoadScene(PlayerPrefs.GetInt("LevelCleared") + 1);
+        }
     }
 
     public void ShowLevelCleared()
@@ -57,7 +62,7 @@ public class Manager : MonoBehaviour {
         buttons[3].SetActive(true);
 
         Debug.Log(PlayerPrefs.GetInt("LevelCleared"));
-        for (int i = 0; i <= PlayerPrefs.GetInt("LevelCleared"); i++)
+        for (int i = 0; i <= System.Math.Min(PlayerPrefs.GetInt("LevelCleared"), 4); i++)
         {
             levels[i].SetActive(true);
         }
