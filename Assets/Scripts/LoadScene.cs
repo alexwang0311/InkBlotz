@@ -35,5 +35,9 @@ public class LoadScene : MonoBehaviour {
         {
             SceneManager.LoadScene("Level3");
         }
+        if (SceneManager.GetActiveScene().name == "Level3")
+        {
+            SceneManager.LoadScene("LevelClear");
+        }
     }
 }
