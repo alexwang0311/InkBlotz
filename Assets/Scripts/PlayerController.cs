@@ -139,14 +139,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void ShowLevelCleared()
-    {
-        GameObject.Find("GameManager").GetComponent<Manager>().ShowLevelCleared();
-        
-        
-    }
-
-        public void RestartLevel()
+    public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

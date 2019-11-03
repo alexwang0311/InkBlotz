@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour {
     public static Manager Instance { get { return _instance; } }
 
     public GameObject backGround;
+    public GameObject creditPic;
     public GameObject[] levels;
 
     //buttons[0] holds 'Play'
@@ -49,6 +50,7 @@ public class Manager : MonoBehaviour {
         buttons[2].SetActive(false);
         buttons[3].SetActive(true);
 
+        Debug.Log(PlayerPrefs.GetInt("LevelCleared"));
         for (int i = 0; i <= PlayerPrefs.GetInt("LevelCleared"); i++)
         {
             levels[i].SetActive(true);
@@ -62,6 +64,7 @@ public class Manager : MonoBehaviour {
             SceneManager.LoadScene(0);
         }
 
+        creditPic.SetActive(false);
         backGround.SetActive(true);
         buttons[0].SetActive(true);
         buttons[1].SetActive(true);
@@ -76,7 +79,8 @@ public class Manager : MonoBehaviour {
 
     public void ShowCredits()
     {
-        //show Credits
+        buttons[3].SetActive(true);
+        creditPic.SetActive(true);
     }
 
         
