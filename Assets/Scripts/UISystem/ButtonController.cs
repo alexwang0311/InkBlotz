@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour {
-
-    private void Awake()
-    {
-        Cursor.visible = true;
-    }
-
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
