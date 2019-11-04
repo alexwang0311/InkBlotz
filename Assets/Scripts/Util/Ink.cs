@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Util class
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +15,7 @@ public class Ink {
         maxInk = ink;
     }
 
-    public void Use(float use)
+    public void UseInk(float use)
     {
         ink -= use;
         if (ink < 0)
@@ -34,5 +36,15 @@ public class Ink {
         {
             ink = maxInk;
         }
+    }
+
+    public float GetMaxInk()
+    {
+        return maxInk;
+    }
+
+    public bool HasInk()
+    {
+        return ink > 0;
     }
 }

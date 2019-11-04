@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour {
             float bottleArea = bottleSize.x * bottleSize.y;
             float totalInk = bottleArea * 1f;
             Debug.Log("More ink: " + totalInk);
-            LineCreator.ink.AddInk(totalInk);
+            InkStatus.ink.AddInk(totalInk);
             Destroy(collision.gameObject);
         }
 

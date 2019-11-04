@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Switcher : MonoBehaviour {
     public GameObject pen;
-    public GameObject lineCreator;
     public GameObject eraser;
     private bool isUsingPen;
 
@@ -21,14 +20,12 @@ public class Switcher : MonoBehaviour {
             if (isUsingPen)
             {
                 pen.SetActive(false);
-                lineCreator.SetActive(false);
                 eraser.SetActive(true);
                 isUsingPen = false;
             }
             else
             {
                 pen.SetActive(true);
-                lineCreator.SetActive(true);
                 eraser.SetActive(false);
                 isUsingPen = true;
             }

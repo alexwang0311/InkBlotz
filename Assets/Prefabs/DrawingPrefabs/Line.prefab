@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 120593953842478126}
   edgeCollider: {fileID: 68040806334583196}
+  ink_consume_speed: 0.1
 --- !u!120 &120593953842478126
 LineRenderer:
   m_ObjectHideFlags: 1

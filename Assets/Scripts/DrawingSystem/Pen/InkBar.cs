@@ -22,7 +22,7 @@ public class InkBar : MonoBehaviour {
 
     private void UpdateBar()
     {
-        fillerPercent = LineCreator.ink.GetInk() / LineCreator.MAX_INK;
+        fillerPercent = InkStatus.ink.GetInk() / InkStatus.ink.GetMaxInk();
         inkContent.fillAmount = fillerPercent;
     }
 }
