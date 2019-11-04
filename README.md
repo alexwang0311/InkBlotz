@@ -1,4 +1,5 @@
 # Inkblotz!
+Awarded with the prize for The Best Workshop Project at VandyHack 2019. 
 Help Mr. Pinkie find his way home by defeating the monsters and drawing the way out! This game will bring you back your childhood creativity and fun. Pick up your pen and start doodling now!!!
 
 ## Inspiration
