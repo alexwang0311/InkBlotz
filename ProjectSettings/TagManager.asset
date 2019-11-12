@@ -9,6 +9,8 @@ TagManager:
   - Boarder
   - Bottom
   - Monster
+  - Bouncy
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Monster
   - Boarder
   - VandyHack
-  - 
+  - Trajectory
   - 
   - 
   - 
