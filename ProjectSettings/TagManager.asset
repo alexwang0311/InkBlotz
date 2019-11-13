@@ -11,6 +11,7 @@ TagManager:
   - Monster
   - Bouncy
   - Background
+  - PaintHolder
   layers:
   - Default
   - TransparentFX

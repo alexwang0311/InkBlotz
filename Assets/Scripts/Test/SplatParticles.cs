@@ -13,6 +13,8 @@ public class SplatParticles : MonoBehaviour {
 
         int count = collisionEvents.Count;
 
+        GameObject paintHolder = GameObject.FindWithTag("PaintHolder");
+
         for (int i = 0; i < count; i++)
         {
             int randomIndex = Random.Range(0, splatPrefabs.Length);
@@ -21,6 +23,7 @@ public class SplatParticles : MonoBehaviour {
             scaler.x *= 50;
             scaler.y *= 5;
             splat.transform.localScale = scaler;
+            splat.transform.SetParent(paintHolder.transform);
         }
     }
 }
