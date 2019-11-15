@@ -90,6 +90,7 @@ public class Controller : MonoBehaviour {
             {
                 isDashing = true;
                 dashLeft = dashLeft - 1;
+                Instantiate(dashEffect, transform.position, Quaternion.identity);
                 Debug.Log("Dashing. Dash left: " + dashLeft);
             }
         }
@@ -124,7 +125,6 @@ public class Controller : MonoBehaviour {
 
         if (isDashing && dashTime >= 0)
         {
-            Instantiate(dashEffect, transform.position, Quaternion.identity);
             cam.SetTrigger("Shake");
             dashTime -= Time.deltaTime;
             if (isFacingRight) {
